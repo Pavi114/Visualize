@@ -16,7 +16,10 @@ import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
 
 public class MainActivity extends AppCompatActivity
-    implements qr_fragment.OnFragmentInteractionListener, overlay_fragment.OnFragmentInteractionListener
+    implements
+        qr_fragment.OnFragmentInteractionListener,
+        overlay_fragment.OnFragmentInteractionListener,
+        ui_fragment.OnFragmentInteractionListener
 {
 
     private static final String TAG = "Main";
