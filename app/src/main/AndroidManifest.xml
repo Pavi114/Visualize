@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <!--
          Indicates that app requires ARCore ("AR Required"). Causes the Google
              Play Store to download and install Google Play Services for AR along
@@ -22,7 +27,7 @@
     </application> <!-- Sceneform requires OpenGL ES 3.0 or later. -->
     <uses-feature android:name="android.hardware.camera.ar" />
     <!--
- Indicates that app requires ARCore ("AR Required"). Ensures the app is
+         Indicates that app requires ARCore ("AR Required"). Ensures the app is
          visible only in the Google Play Store on devices that support ARCore.
          For "AR Optional" apps remove this line.
     -->

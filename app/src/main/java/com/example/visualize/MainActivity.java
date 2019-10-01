@@ -15,13 +15,23 @@ import com.google.ar.core.Anchor;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity
+    implements qr_fragment.OnFragmentInteractionListener, overlay_fragment.OnFragmentInteractionListener
+{
 
     private static final String TAG = "Main";
     private static final double MIN_OPENGL_VERSION = 3.0;
 
     private ArFragment arFragment;
     private ModelRenderable model;
+
+    private qr_fragment qrFragment;
+    private overlay_fragment overlayFragment;
+
+    @Override
+    public void onFragmentInteraction(Uri uri){
+        //you can leave it empty
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        arFragment =(ArFragment) getSupportFragmentManager().findFragmentById(R.id.ar_fragment);
+        arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.ar_fragment);
     }
 
     /*
