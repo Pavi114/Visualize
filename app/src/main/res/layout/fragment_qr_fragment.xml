@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:alpha="0.7"
     tools:context=".qr_fragment">
 
     <com.example.visualize.FocusView
@@ -21,26 +20,28 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/visualize_logo"
+            android:src="@drawable/loogoo"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             android:maxHeight="20dp"
             android:maxWidth="30dp"
-            android:layout_gravity="center_vertical"
+            android:layout_gravity="top"
             />
-        <View
-            android:layout_width="1dp"
-            android:layout_height="25dp"
-            android:background="@color/lightgrey"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            />
+<!--        <View-->
+<!--            android:layout_width="1dp"-->
+<!--            android:layout_height="25dp"-->
+<!--            android:background="@color/lightgrey"-->
+<!--            android:layout_marginLeft="4dp"-->
+<!--            android:layout_marginRight="4dp"-->
+<!--            />-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:layout_gravity="bottom"
             android:alpha="0.5"
-            android:textSize="15sp"
+            android:textSize="10sp"
             android:text="@string/visualize" />
     </LinearLayout>
 
