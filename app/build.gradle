@@ -45,4 +45,7 @@ dependencies {
 
     // Alternatively, use ArSceneView without the UX dependency.
     implementation 'com.google.ar.sceneform:core:1.12.0'
+
+    // Sceneform asset loader
+    implementation 'com.google.ar.sceneform:assets:1.12.0'
 }

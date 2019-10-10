@@ -1,6 +1,7 @@
 package com.example.visualize;
 
 import android.content.Context;
+import android.util.Log;
 import android.util.SparseArray;
 import android.widget.Toast;
 import com.google.android.gms.vision.Frame;
@@ -30,19 +31,21 @@ public class QRDetector {
 
 
   public void detectQR(ByteBuffer byteBuffer, int height, int width, int format){
+      qrDetected = false;
       Frame frame = new Frame.Builder().setImageData(byteBuffer, width, height, format).build();
       SparseArray<Barcode> barcodes = qrCodeDetector.detect(frame);
-      barcodeValue = barcodes.valueAt(0);
-      if(barcodeValue.valueFormat == Barcode.URL){
-          String value = barcodeValue.url.url;
-          if(value.contains(".")){
-              String extension = value.substring(value.lastIndexOf(".") + 1);
-              if(extension.equals("gltf")){
-                  qrDetected = true;
+      if(barcodes.size() > 0) {
+          barcodeValue = barcodes.valueAt(0);
+          if(barcodeValue.valueFormat == Barcode.URL){
+              String value = barcodeValue.displayValue;
+              if(value.contains(".")){
+                  String extension = value.substring(value.lastIndexOf(".") + 1);
+                  if(extension.equals("gltf")){
+                      qrDetected = true;
+                  }
               }
           }
       }
-      qrDetected = false;
   }
 
   public Barcode getQrValue(){

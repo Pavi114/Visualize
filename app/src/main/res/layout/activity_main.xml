@@ -9,19 +9,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-<!--    <fragment class="com.example.visualize.ui_fragment"-->
-<!--        android:id="@+id/ui_fragment"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent" />-->
-
-    <fragment class="com.example.visualize.qr_fragment"
-        android:id="@+id/qr_fragment"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <fragment class="com.example.visualize.overlay_fragment"
-        android:id="@+id/overlay_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container" />
 
 </RelativeLayout>
