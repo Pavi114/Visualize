@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.ar.sceneform.ArSceneView;
+
 
 /**
  * A simple {@link Fragment} subclass.

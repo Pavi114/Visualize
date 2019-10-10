@@ -11,7 +11,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.google.android.gms.vision.barcode.BarcodeDetector;
 import com.google.ar.core.Anchor;
+import com.google.ar.sceneform.ArSceneView;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
 
@@ -30,6 +32,9 @@ public class MainActivity extends AppCompatActivity
 
     private qr_fragment qrFragment;
     private overlay_fragment overlayFragment;
+
+    private QRDetector qrDetector;
+
 
     @Override
     public void onFragmentInteraction(Uri uri){
